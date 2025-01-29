@@ -114,10 +114,7 @@ def main():
             print(crypto.generate_key(int(input("Length: "))))
         elif choice == '8':
             text = input("Text: ")
-            key = input("Key (must be same length as text): ")
-            if len(key) != len(text):
-                print("Error: Key must be the same length as the text")
-                continue
+            key = input("Key: ")
             cipher = crypto.binary_to_base64(crypto.xor_binary(
                 crypto.ascii_to_binary(text),
                 crypto.ascii_to_binary(key)
