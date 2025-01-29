@@ -31,11 +31,13 @@ class CryptoUtils:
 
     @staticmethod
     def xor_binary(bin1, bin2):
-        # Make sure both binary strings are of the same length
-        repeated_bin2 = bin2 * (len(bin1) // len(bin2) + 1)
+        # Pad the shorter binary string with zeros
+        max_len = max(len(bin1), len(bin2))
+        bin1 = bin1.ljust(max_len, '0')
+        bin2 = bin2.ljust(max_len, '0')
         
         result = []
-        for b1, b2 in zip(bin1, repeated_bin2):
+        for b1, b2 in zip(bin1, bin2):
             xored_bit = str(int(b1) ^ int(b2))
             result.append(xored_bit)
             
@@ -112,15 +114,19 @@ def main():
             print(crypto.generate_key(int(input("Length: "))))
         elif choice == '8':
             text = input("Text: ")
-            key = crypto.generate_key(16)
+            key = input("Key (must be same length as text): ")
+            if len(key) != len(text):
+                print("Error: Key must be the same length as the text")
+                continue
             cipher = crypto.binary_to_base64(crypto.xor_binary(
                 crypto.ascii_to_binary(text),
                 crypto.ascii_to_binary(key)
             ))
-            print(f"Cipher: {cipher}\nKey: {key}")
+            print(f"Cipher: {cipher}")
         elif choice == '9':
             text = input("Text: ")
-            key = crypto.generate_key(len(text))
+            key_length = int(input("Key length: "))
+            key = crypto.generate_key(key_length)
             cipher = crypto.binary_to_base64(crypto.xor_binary(
                 crypto.ascii_to_binary(text),
                 crypto.ascii_to_binary(key)
