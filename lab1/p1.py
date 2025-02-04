@@ -2,13 +2,16 @@ import string
 
 ALPHABET = 'abcdefghijklmnñopqrstuvwxyz'  
 
+def clean_text(text: str) -> str:
+    return ''.join(c for c in text.lower() if c in ALPHABET or c.isspace())
+
 def caesar_cipher(message: str, encrypt: bool = True) -> str:
     while True:
         try:
-            shift = int(input('Enter shift value (1-27): '))  
-            if 0 < shift < 27:  
+            shift = int(input(f'Enter shift value (1-{len(ALPHABET)-1}): '))
+            if 0 < shift < len(ALPHABET):
                 break
-            print("Shift must be between 1 and 27")  
+            print(f"Shift must be between 1 and {len(ALPHABET)-1}")
         except ValueError:
             print("Please enter a valid number")
     
@@ -18,7 +21,7 @@ def caesar_cipher(message: str, encrypt: bool = True) -> str:
     result = ''
     for c in message.lower():
         if c in ALPHABET:
-            pos = (ALPHABET.index(c) + shift) %  len(ALPHABET)
+            pos = (ALPHABET.index(c) + shift) % len(ALPHABET)
             result += ALPHABET[pos]
         else:
             result += c
@@ -35,6 +38,7 @@ if __name__ == "__main__":
             break
             
         message = input('\nEnter message: ')
+        message = clean_text(message)  
         
         if choice == '1':
             print("\n--- Caesar Cipher ---")
