@@ -19,7 +19,12 @@ def relative_frequency(text):
 
     text = ''.join(e for e in text if e in theoretical_freq)
     
-    return {char: text.count(char) / len(text) for char in set(text)}
+    frequencies = {char: 0 for char in theoretical_freq}
+    if len(text) > 0:
+        for char in text:
+            frequencies[char] = text.count(char) / len(text)
+    
+    return frequencies
 
 
 message = input('Message: ')
