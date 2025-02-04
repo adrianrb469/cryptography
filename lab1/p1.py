@@ -1,14 +1,14 @@
 import string
 
-ALPHABET = string.ascii_lowercase
+ALPHABET = 'abcdefghijklmnñopqrstuvwxyz'  
 
 def caesar_cipher(message: str, encrypt: bool = True) -> str:
     while True:
         try:
-            shift = int(input('Enter shift value (1-25): '))
-            if 0 < shift < 26:
+            shift = int(input('Enter shift value (1-27): '))  
+            if 0 < shift < 27:  
                 break
-            print("Shift must be between 1 and 25")
+            print("Shift must be between 1 and 27")  
         except ValueError:
             print("Please enter a valid number")
     
@@ -18,7 +18,7 @@ def caesar_cipher(message: str, encrypt: bool = True) -> str:
     result = ''
     for c in message.lower():
         if c in ALPHABET:
-            pos = (ALPHABET.index(c) + shift) % 26
+            pos = (ALPHABET.index(c) + shift) %  len(ALPHABET)
             result += ALPHABET[pos]
         else:
             result += c
