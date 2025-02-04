@@ -1,3 +1,6 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
 theoretical_freq = {
         'A': 0.1253, 'B': 0.0142, 'C': 0.0468, 'D': 0.0586, 'E': 0.1368,
         'F': 0.0069, 'G': 0.0101, 'H': 0.0070, 'I': 0.0625, 'J': 0.0044,
@@ -26,7 +29,27 @@ def relative_frequency(text):
     
     return frequencies
 
+def plot_frequencies(text):
+    actual_freq = relative_frequency(text)
+    
+    sorted_items = sorted(theoretical_freq.items(), key=lambda x: x[1], reverse=True)
+    letters = [item[0] for item in sorted_items]
+    theo_values = [item[1] for item in sorted_items]
+    actual_values = [actual_freq[letter] for letter in letters]
+
+    plt.figure(figsize=(10, 5))
+    y_pos = np.arange(len(letters))
+    
+    plt.barh(y_pos, theo_values, height=0.4, label='Theoretical', color='blue', alpha=0.5)
+    plt.barh(y_pos, actual_values, height=0.4, label='Actual', color='red', alpha=0.5)
+    
+    plt.yticks(y_pos, letters)
+    plt.xlabel('Frequency')
+    plt.title('Letter Frequencies Comparison')
+    plt.legend()
+    
+    plt.tight_layout()
+    plt.show()
 
 message = input('Message: ')
-
-print(relative_frequency(message))
+plot_frequencies(message)
