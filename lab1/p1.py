@@ -9,11 +9,43 @@ if __name__ == "__main__":
         print("2. Affine Cipher")
         print("3. Vigenère Cipher")
         print("4. Exit")
+        print("5. Run Tests")
         
         choice = input("\nEnter choice (1-4): ")
         
         if choice == '4':
             break
+            
+        if choice == '5':
+            print("\n=== Running Cipher Tests ===")
+            
+            # Test Caesar Cipher
+            test_msg = "HELLO WORLD"
+            print("\nCaesar Cipher Test:")
+            print(f"Original: {test_msg}")
+            enc = caesar_cipher(test_msg, encrypt=True)
+            dec = caesar_cipher(enc, encrypt=False)
+            print(f"Encrypted: {enc}")
+            print(f"Decrypted: {dec}")
+            
+            # Test Affine Cipher
+            print("\nAffine Cipher Test:")
+            print(f"Original: {test_msg}")
+            enc = affine_cipher(test_msg, encrypt=True)
+            dec = affine_cipher(enc, encrypt=False)
+            print(f"Encrypted: {enc}")
+            print(f"Decrypted: {dec}")
+            
+            # Test Vigenère Cipher
+            test_key = "KEY"
+            print("\nVigenère Cipher Test:")
+            print(f"Original: {test_msg}")
+            print(f"Key: {test_key}")
+            enc = vigenere_cipher(test_msg, test_key, encrypt=True)
+            dec = vigenere_cipher(enc, test_key, encrypt=False)
+            print(f"Encrypted: {enc}")
+            print(f"Decrypted: {dec}")
+            continue
             
         message = input('\nEnter message: ')
         message = clean_text(message)  
@@ -45,4 +77,4 @@ if __name__ == "__main__":
             break
 
         else:
-            print("Invalid choice! Please select 1-4")
+            print("Invalid choice! Please select 1-5")
