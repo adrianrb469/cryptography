@@ -107,6 +107,12 @@ def main():
         print(f"Key: {key}, Score: {score:.2f}")
         print(f"Text: {text[:100]}...")
 
+    print("\nThe following key was found manually by changing last letter for vigenere cipher.")
+    key = "payaso"
+    decrypted = vigenere_cipher(vigenere_text, key, encrypt=False)
+    print(f"Key: {key}, Score: {score:.2f}")
+    print(f"Text: {decrypted[:100]}...")
+
 
 if __name__ == "__main__":
     main()
