@@ -1,4 +1,4 @@
-from utils import ALPHABET
+from .utils import ALPHABET
 
 def vigenere_cipher(text, key, encrypt=True):
     result = ""

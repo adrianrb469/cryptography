@@ -1,4 +1,4 @@
-from utils import ALPHABET, clean_text, mod_inverse, gcd
+from .utils import ALPHABET, clean_text, mod_inverse, gcd
 
 def affine_cipher(message: str, encrypt: bool = True) -> str:
     while True:

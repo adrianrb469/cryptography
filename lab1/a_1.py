@@ -1,7 +1,7 @@
-from utils import ALPHABET, clean_text
-from caesar import caesar_cipher
-from affine import affine_cipher
-from vigenere import vigenere_cipher
+from crypto.utils import ALPHABET, clean_text
+from crypto.caesar import caesar_cipher
+from crypto.affine import affine_cipher
+from crypto.vigenere import vigenere_cipher
 
 if __name__ == "__main__":
     while True:

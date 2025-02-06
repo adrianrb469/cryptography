@@ -1,4 +1,4 @@
-from utils import ALPHABET, clean_text
+from .utils import ALPHABET, clean_text
 
 def caesar_cipher(message: str, encrypt: bool = True) -> str:
     while True:
