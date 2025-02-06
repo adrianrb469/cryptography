@@ -11,7 +11,7 @@ if __name__ == "__main__":
         print("4. Exit")
         print("5. Run Tests")
         
-        choice = input("\nEnter choice (1-4): ")
+        choice = input("\nEnter choice (1-5): ")
         
         if choice == '4':
             break
