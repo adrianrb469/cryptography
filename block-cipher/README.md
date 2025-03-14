@@ -1,6 +1,6 @@
 # Block Cipher Implementations
 
-This project provides implementations of various block cipher algorithms and modes of operation in Go.
+This exercise provides implementations of various block cipher algorithms and modes of operation in Go.
 
 ## Implemented Algorithms
 
