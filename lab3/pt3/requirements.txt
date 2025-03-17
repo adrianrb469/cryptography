@@ -1,0 +1,4 @@
+pycryptodome==3.19.1
+psutil==5.9.8
+pandas==2.2.1
+matplotlib==3.8.3 
