@@ -1,20 +1,47 @@
 # Quantum Key Distribution (QKD) - BB84 Protocol Simulation
 
-A Python implementation of the BB84 quantum key distribution protocol for educational purposes, demonstrating how quantum mechanics can be used for secure key exchange.
+A comprehensive Python implementation of the BB84 quantum key distribution protocol for educational purposes, demonstrating how quantum mechanics enables secure key exchange.
+
+## Interactive Infographic
+
+![BB84 Interactive Infographic](bb84/screen.png)
+
+An interactive web-based infographic that provides a comprehensive visual explanation of the BB84 protocol and quantum cryptography principles.
+
+### Accessing the Interactive Infographic:
+
+1. Navigate to the `bb84/` directory
+2. Open the `index.html` file in your web browser
+3. Explore the interactive demonstration of the BB84 protocol
+
+The infographic features:
+
+- Step-by-step explanation of the BB84 protocol
+- Interactive simulations with real-time execution
+- Demonstration of eavesdropping detection mechanisms (Eve)
+- Real-world applications of quantum cryptography
+- Modern, user-friendly interface with educational content
 
 ## Overview
 
-This notebooks simulate the BB84 protocol, the first quantum cryptography protocol developed by Bennett and Brassard in 1984. It demonstrates how Alice and Bob can establish a shared secret key while detecting eavesdropping attempts through quantum mechanical principles.
+This project simulates the BB84 protocol, the first quantum cryptography protocol developed by Bennett and Brassard in 1984. It demonstrates how Alice and Bob can establish a shared secret key while detecting eavesdropping attempts through fundamental quantum mechanical principles.
 
 ## Features
 
 - **BB84 Protocol Simulation**: Complete implementation with random bit and basis selection
 - **Eavesdropping Detection**: Simulates Eve's interception and measures quantum bit error rate (QBER)
 - **Interactive Analysis**: Jupyter notebooks with detailed explanations and visualizations
-- **Key Generation**: Demonstrates sifting process to create shared secret keys
+- **Key Generation**: Demonstrates the sifting process to create shared secret keys
 - **Security Analysis**: Shows how quantum mechanics provides information-theoretic security
 
 ## Files
+
+### Interactive Infographic (`bb84/`)
+
+- `index.html`: Interactive web-based infographic of the BB84 protocol
+- `bb84.js`: JavaScript simulation logic and protocol implementation
+- `style.css` and `satoshi.css`: Styling and visual design components
+- `scroll-animations.js`: Animation framework for enhanced user experience
 
 ### `main.ipynb`
 
@@ -51,6 +78,13 @@ pip install pandas jupyter numpy
 
 ## Usage
 
+### For the Interactive Infographic:
+
+1. Open `bb84/index.html` in your web browser
+2. Navigate through the interactive educational content
+
+### For the Jupyter Notebooks:
+
 1. Clone the repository
 2. Install dependencies
 3. Open either notebook in Jupyter:
@@ -59,7 +93,7 @@ pip install pandas jupyter numpy
    # or
    jupyter notebook lab.ipynb
    ```
-4. Run the cells to see the BB84 simulation in action
+4. Execute the cells to observe the BB84 simulation in action
 
 ## Key Concepts Demonstrated
 
@@ -70,10 +104,10 @@ pip install pandas jupyter numpy
 
 ## Educational Value
 
-This simulation helps understand:
+This simulation facilitates understanding of:
 
 - How quantum mechanics enables unconditionally secure communication
-- The difference between classical and quantum cryptography
+- The fundamental differences between classical and quantum cryptography
 - Real-world limitations and advantages of QKD systems
 - The role of error rates in quantum communication security
 

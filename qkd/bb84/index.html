@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Protocolo BB84 – ¡Criptografía Cuántica para Todos!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="satoshi.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Satoshi-Regular", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-zinc-900 text-zinc-100 font-sans">
+    <!-- Sección de Bienvenida -->
+    <section class="min-h-screen flex items-center justify-center text-center">
+      <div class="max-w-4xl mx-auto px-6">
+        <h1
+          class="text-5xl md:text-7xl font-bold mb-6 text-white opacity-0 transform translate-y-8 animate-fade-in-up"
+        >
+          <i
+            data-lucide="shield-check"
+            class="inline-block w-16 h-16 md:w-20 md:h-20 mr-4"
+          ></i>
+          Criptografía Cuántica
+        </h1>
+        <p
+          class="text-xl md:text-2xl mb-12 text-zinc-400 opacity-0 transform translate-y-8 animate-fade-in-up-delay"
+        >
+          Cómo la física cuántica mantiene tus secretos a salvo
+        </p>
+        <div class="opacity-0 animate-fade-in-up-delay-2">
+          <span class="block mb-3 text-zinc-500">Desplázate para explorar</span>
+          <div class="text-3xl animate-bounce">
+            <i data-lucide="chevron-down" class="w-8 h-8 mx-auto"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Introducción -->
+    <section class="min-h-screen py-20 flex items-center bg-zinc-800">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-8 text-white">
+          ¿Qué es BB84?
+        </h2>
+        <p
+          class="text-lg md:text-xl text-center mb-16 max-w-3xl mx-auto text-zinc-400"
+        >
+          BB84 es un protocolo de distribución de claves cuánticas que utiliza
+          las extrañas propiedades de la física cuántica para crear claves de
+          cifrado inquebrantables.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="point text-center p-8 bg-zinc-900 rounded-xl transform translate-y-5 opacity-0 transition-all duration-700"
+          >
+            <div class="text-4xl mb-4 flex justify-center">
+              <i data-lucide="dice-6" class="w-12 h-12 text-blue-400"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-white">Aleatorio</h3>
+            <p class="text-zinc-400">Utiliza aleatoriedad cuántica</p>
+          </div>
+          <div
+            class="point text-center p-8 bg-zinc-900 rounded-xl transform translate-y-5 opacity-0 transition-all duration-700"
+          >
+            <div class="text-4xl mb-4 flex justify-center">
+              <i data-lucide="lock" class="w-12 h-12 text-green-400"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-white">Seguro</h3>
+            <p class="text-zinc-400">Imposible de interceptar sin detección</p>
+          </div>
+          <div
+            class="point text-center p-8 bg-zinc-900 rounded-xl transform translate-y-5 opacity-0 transition-all duration-700"
+          >
+            <div class="text-4xl mb-4 flex justify-center">
+              <i data-lucide="zap" class="w-12 h-12 text-yellow-400"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-white">Rápido</h3>
+            <p class="text-zinc-400">Crea claves al instante</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ¿Cómo funciona? -->
+    <section class="min-h-screen py-20 flex items-center bg-zinc-900">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 text-white">
+          ¿Cómo funciona?
+        </h2>
+        <div class="space-y-12">
+          <div
+            class="step flex flex-col md:flex-row items-center gap-8 p-8 bg-zinc-800 rounded-xl transform -translate-x-12 opacity-0 transition-all duration-700"
+          >
+            <div
+              class="text-4xl font-bold bg-white text-zinc-900 w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0"
+            >
+              1
+            </div>
+            <div class="text-center md:text-left">
+              <h3 class="text-2xl font-semibold mb-3 text-white">
+                Alice prepara fotones
+              </h3>
+              <p class="text-zinc-400">
+                Alice elige bits aleatorios (0 o 1) y bases aleatorias (| o /)
+                para codificarlos en fotones
+              </p>
+            </div>
+          </div>
+          <div
+            class="step flex flex-col md:flex-row items-center gap-8 p-8 bg-zinc-800 rounded-xl transform -translate-x-12 opacity-0 transition-all duration-700"
+          >
+            <div
+              class="text-4xl font-bold bg-white text-zinc-900 w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0"
+            >
+              2
+            </div>
+            <div class="text-left">
+              <h3 class="text-2xl font-semibold mb-3 text-white">
+                Bob mide los fotones
+              </h3>
+              <p class="text-zinc-400">
+                Bob elige aleatoriamente bases para medir los fotones que Alice
+                envió
+              </p>
+            </div>
+          </div>
+          <div
+            class="step flex flex-col md:flex-row items-center gap-8 p-8 bg-zinc-800 rounded-xl transform -translate-x-12 opacity-0 transition-all duration-700"
+          >
+            <div
+              class="text-4xl font-bold bg-white text-zinc-900 w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0"
+            >
+              3
+            </div>
+            <div class="text-center md:text-left">
+              <h3 class="text-2xl font-semibold mb-3 text-white">
+                Comparan las bases
+              </h3>
+              <p class="text-zinc-400">
+                Cuando sus bases coinciden, conservan esos bits como parte de su
+                clave secreta
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Simulación Interactiva -->
+    <section
+      class="min-h-screen py-20 flex items-center bg-zinc-800 text-center"
+    >
+      <div class="w-full max-w-7xl mx-auto px-6">
+        <h2 class="text-4xl md:text-5xl font-bold mb-8 text-white">
+          ¡Pruébalo tú mismo!
+        </h2>
+        <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-zinc-400">
+          Haz clic en el botón para ver cómo Alice y Bob crean una clave secreta
+        </p>
+        <button
+          onclick="runSimulation()"
+          class="bg-white hover:bg-zinc-100 text-zinc-900 px-8 py-4 text-lg rounded-lg hover:shadow-lg hover:-translate-y-1 transition-all duration-300 mb-12"
+        >
+          <i data-lucide="play" class="inline-block w-5 h-5 mr-2"></i> Ejecutar
+          Simulación
+        </button>
+        <div
+          id="simulation-output"
+          class="w-full bg-zinc-900 rounded-xl p-8 text-sm"
+        ></div>
+      </div>
+    </section>
+
+    <!-- ¿Qué pasa con Eve? -->
+    <section
+      class="min-h-screen py-20 flex items-center bg-zinc-900 text-center"
+    >
+      <div class="w-full max-w-7xl mx-auto px-6">
+        <h2 class="text-4xl md:text-5xl font-bold mb-8 text-white">
+          ¿Qué pasa si alguien intenta espiar?
+          <i
+            data-lucide="eye"
+            class="inline-block w-12 h-12 ml-2 text-red-400"
+          ></i>
+        </h2>
+        <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-zinc-400">
+          Conoce a Eve, la espía. Veamos qué sucede cuando intenta interceptar
+          la comunicación cuántica...
+        </p>
+        <button
+          onclick="runSimulation(0.3)"
+          class="bg-red-500 hover:bg-red-600 text-white px-8 py-4 text-lg rounded-lg hover:shadow-lg hover:-translate-y-1 transition-all duration-300 mb-12"
+        >
+          <i data-lucide="alert-triangle" class="inline-block w-5 h-5 mr-2"></i>
+          Simular con Eve (30% de interferencia)
+        </button>
+        <div
+          id="simulation-output-eve"
+          class="w-full bg-zinc-900 rounded-xl p-8 text-sm mb-12"
+        ></div>
+        <div
+          class="w-full max-w-7xl mx-auto p-8 bg-zinc-800 rounded-xl text-left"
+        >
+          <h3 class="text-2xl font-semibold mb-4 text-white">
+            ¿Por qué funciona esto?
+          </h3>
+          <p class="text-lg text-zinc-400">
+            La mecánica cuántica nos dice que medir un sistema cuántico lo
+            altera. ¡Cuando Eve intenta interceptar los fotones, introduce
+            errores que Alice y Bob pueden detectar!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conclusión -->
+    <section
+      class="min-h-screen py-20 flex items-center bg-zinc-800 text-center"
+    >
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-4xl md:text-5xl font-bold mb-8 text-white">
+          El Futuro es Cuántico
+          <i
+            data-lucide="rocket"
+            class="inline-block w-12 h-12 ml-2 text-purple-400"
+          ></i>
+        </h2>
+        <p class="text-lg md:text-xl mb-16 max-w-4xl mx-auto text-zinc-400">
+          La criptografía cuántica no es ciencia ficción: se está utilizando hoy
+          en día para proteger comunicaciones sensibles en todo el mundo.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="text-center p-8 bg-zinc-900 border border-zinc-700 rounded-xl"
+          >
+            <h3
+              class="text-2xl font-semibold mb-4 text-white flex items-center justify-center"
+            >
+              <i
+                data-lucide="building-2"
+                class="w-8 h-8 mr-2 text-blue-400"
+              ></i>
+              Bancos
+            </h3>
+            <p class="text-zinc-400">Protegiendo transacciones financieras</p>
+          </div>
+          <div
+            class="text-center p-8 bg-zinc-900 border border-zinc-700 rounded-xl"
+          >
+            <h3
+              class="text-2xl font-semibold mb-4 text-white flex items-center justify-center"
+            >
+              <i data-lucide="landmark" class="w-8 h-8 mr-2 text-red-400"></i>
+              Gobiernos
+            </h3>
+            <p class="text-zinc-400">Asegurando comunicaciones clasificadas</p>
+          </div>
+          <div
+            class="text-center p-8 bg-zinc-900 border border-zinc-700 rounded-xl"
+          >
+            <h3
+              class="text-2xl font-semibold mb-4 text-white flex items-center justify-center"
+            >
+              <i data-lucide="globe" class="w-8 h-8 mr-2 text-green-400"></i>
+              Internet
+            </h3>
+            <p class="text-zinc-400">El futuro de la privacidad en línea</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nueva Sección: Aplicaciones Cotidianas -->
+    <section
+      class="min-h-screen py-20 flex items-center bg-zinc-900 text-center"
+    >
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-4xl md:text-5xl font-bold mb-8 text-white">
+          Aplicaciones Cotidianas
+          <i
+            data-lucide="smartphone"
+            class="inline-block w-12 h-12 ml-2 text-teal-400"
+          ></i>
+        </h2>
+        <p class="text-lg md:text-xl mb-16 max-w-4xl mx-auto text-zinc-400">
+          La criptografía cuántica no solo es para los científicos. Pronto,
+          podría proteger tus mensajes de texto y correos electrónicos.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="text-center p-8 bg-zinc-900 border border-zinc-700 rounded-xl"
+          >
+            <h3
+              class="text-2xl font-semibold mb-4 text-white flex items-center justify-center"
+            >
+              <i
+                data-lucide="message-circle"
+                class="w-8 h-8 mr-2 text-yellow-400"
+              ></i>
+              Mensajes
+            </h3>
+            <p class="text-zinc-400">Protegiendo tus chats diarios</p>
+          </div>
+          <div
+            class="text-center p-8 bg-zinc-900 border border-zinc-700 rounded-xl"
+          >
+            <h3
+              class="text-2xl font-semibold mb-4 text-white flex items-center justify-center"
+            >
+              <i data-lucide="mail" class="w-8 h-8 mr-2 text-red-400"></i>
+              Correos
+            </h3>
+            <p class="text-zinc-400">Asegurando tus correos electrónicos</p>
+          </div>
+          <div
+            class="text-center p-8 bg-zinc-900 border border-zinc-700 rounded-xl"
+          >
+            <h3
+              class="text-2xl font-semibold mb-4 text-white flex items-center justify-center"
+            >
+              <i data-lucide="wifi" class="w-8 h-8 mr-2 text-blue-400"></i>
+              Redes
+            </h3>
+            <p class="text-zinc-400">Haciendo más seguras tus conexiones</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="bb84.js"></script>
+    <script src="scroll-animations.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>
+      // Inicializar iconos de Lucide
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
